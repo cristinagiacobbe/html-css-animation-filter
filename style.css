@@ -64,6 +64,7 @@
 .ex-6-img:hover{
     filter: grayscale(100%);
 }
+
 /* Add transition+2filter on hover to 8-img */
 .ex-8-img{
     transition:all 4s;
