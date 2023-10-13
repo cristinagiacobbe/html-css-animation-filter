@@ -57,12 +57,20 @@
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
-/* Add transition-filter on hover to 6-square */
+/* Add transition-filter on hover to 6-img */
 .ex-6-img{
     transition: all 4s;
 }
 .ex-6-img:hover{
     filter: grayscale(100%);
+}
+/* Add transition+2filter on hover to 8-img */
+.ex-8-img{
+    transition:all 4s;
+}
+.ex-8-img:hover{
+    filter: drop-shadow(20px 20px 20px black) grayscale(100%);
+    border-radius: 15px;
 }
 .ex-9-img {
     margin: 50px 100px;
