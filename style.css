@@ -73,6 +73,7 @@
     filter: drop-shadow(20px 20px 20px black) grayscale(100%);
     border-radius: 15px;
 }
+/* Add 2transition+2filter on hover to 9-img */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
@@ -85,7 +86,12 @@
 }
 .ex-10-icon {
     font-size: 60px;
+    animation-name: rotation;
+    animation-duration: 4s;
 }
+@keyframes rotation {
+    100% {transform: rotate(360deg);}
+  }
 .ex-11-icon {
     font-size: 60px;
 }
