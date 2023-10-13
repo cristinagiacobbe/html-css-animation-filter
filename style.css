@@ -29,11 +29,16 @@
 .ex-3-square:hover{
     border-radius: 50%;
 }
-
+/* Add transition and hover to 3-square */
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: all 4s ;
+}
+.ex-4-square:hover{
+    width: 0;
+    height: 0;
 }
 .ex-5-square {
     margin: 20px;
