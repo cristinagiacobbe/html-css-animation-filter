@@ -40,11 +40,19 @@
     width: 0;
     height: 0;
 }
+/* Add transition and hover to 3-square */
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: all 4s;
+}
+.ex-5-square:hover{
+    transform: scale(-1.5);
+}
+.ex-5-square:active{
+    transform: scale(1.5);
 }
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
