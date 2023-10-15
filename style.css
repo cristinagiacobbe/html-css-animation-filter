@@ -40,6 +40,8 @@
     width: 0;
     height: 0;
 }
+/* oppure: opacity:0 */
+
 /* Add transition and hover to 5-square */
 .ex-5-square {
     margin: 20px;
@@ -49,18 +51,18 @@
     transition: all 4s;
 }
 .ex-5-square:hover{
-    transform: scale(-1.5);
+    transform: scale(1.5);
 }
 .ex-5-square:active{
-    transform: scale(1.5);
+    transform: scale(-1.5);
 }
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
 /* Add transition-filter on hover to 6-img */
-.ex-6-img{
+/* .ex-6-img{
     transition: all 4s;
-}
+} */
 .ex-6-img:hover{
     filter: grayscale(100%);
 }
@@ -88,12 +90,12 @@
 .ex-10-icon {
     font-size: 60px;
     animation-name: rotation;
-    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 @keyframes rotation {
-    100% {transform: rotate(360deg);}
+    0% {transform: rotate(360deg);}
   }
-
+ 
 /* Add inverse rotation animation */
 .ex-11-icon {
     font-size: 60px;
@@ -101,8 +103,7 @@
     animation-duration: 4s;
 }
 @keyframes inverse-rotation {
-    25% {transform: rotate(90deg);}
-    50% {transform: rotate(180deg);}
+    0% {transform: rotate(0deg);}
     75% {transform: rotate(270deg);}
     100% {transform: rotate(-0deg);}
   }
@@ -125,13 +126,56 @@
     left: 10%;
     background: #f5f5f5;
     width: 60px;
-    height: 20px;
+    height: 20px;    
 }
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: white-slip;
+    animation-duration: 4s;
+}
+@keyframes white-slip {
+    0% {left: 10%;}  
+    50%{left: calc(100% - 60px);}  
+    100% {left: 10%;}
+  }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: #f5f5f5;
+    background: #faf9f9;
     width: 60px;
     height: 20px;
+}
+.ex-13-button:hover .ex-13-top-white{
+    animation: complete-top-turn 4s;
+}
+@keyframes complete-top-turn {
+    0% {top:-10px; 
+        left: 10% ;}
+    20% {top: -10px;
+        left: 100%; }
+    40% {top: 60px;
+        left: 100%;}
+    60% {top: 60px;
+        left: -10%}
+    80%{top: -10px;
+        left: -10%}
+    100% {top:-10px; 
+        left: 10% ;}
+}
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: complete-bottom-turn 4s;
+}
+@keyframes complete-bottom-turn {
+    0% {bottom:-10px; 
+        right: 20% ;}
+    20% {bottom:-10px;
+        right: calc(100% - 30px) ;}
+    40% {bottom: 60px;
+        right: calc(100% - 30px);}
+    60% {bottom: 60px;
+        right: -10%;}
+    80% {bottom: -10px;
+        right: -10%;}
+    100% {bottom:-10px; 
+        right: 20% ;}
 }
